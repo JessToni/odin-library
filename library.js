@@ -11,3 +11,5 @@ function Book(title, author, pages, genre, status) {
 function addBookToLibrary(obj) {
   myLibrary.push(obj);
 }
+
+const book1 = new Book("Harry Potter", "Donald", 254, "Punk/Rock", "Thrown Away");
