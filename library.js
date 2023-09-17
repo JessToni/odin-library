@@ -8,6 +8,6 @@ function Book(title, author, pages, genre, status) {
   this.status = status;
 }
 
-function addBookToLibrary() {
-  // do stuff here
+function addBookToLibrary(obj) {
+  myLibrary.push(obj);
 }
