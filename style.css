@@ -48,6 +48,10 @@ body {
     width: 100vw;
 }
 
+.header, .footer {
+    background-color: steelblue;
+}
+
 /*Display grid declarations*/
 body {
     display: grid;
