@@ -42,10 +42,14 @@ table {
 	border-spacing: 0;
 }
 
+/*Styling and Positioning*/
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
 /*Display grid declarations*/
 body {
     display: grid;
     grid-template-rows: 1fr 5fr 1fr;
 }
-
-/**/
