@@ -21,13 +21,13 @@ function addBookToLibrary(obj) {
 }
 
 function displayBooks() {
-    const bookContainer = document.querySelector('book-container');
+    const bookContainer = document.querySelector('.book-container');
 
     myLibrary.forEach(function(book) {
         const bookItem = document.createElement('div');
-        book.classList.add('book-item');
+        bookItem.classList.add('book-item');
 
-        book.innerHTML = `
+        bookItem.innerHTML = `
         <h2>${book.title}</h2>
         <p>Author: ${book.author}</p>
         <p>Pages: ${book.pages}</p>
