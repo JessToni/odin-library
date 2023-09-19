@@ -1,4 +1,5 @@
 const myLibrary = [];
+const addBook = document.querySelector('.add-book');
 
 document.addEventListener("DOMContentLoaded", function() {
     const book1 = new Book("Harry Potter", "Donald", 254, "Punk/Rock", "Thrown Away");
