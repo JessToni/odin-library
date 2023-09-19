@@ -52,6 +52,17 @@ body {
     background-color: steelblue;
 }
 
+.book-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	padding: 15px;
+}
+
+.book-item {
+	background-color: coral;
+	width: 300px;
+}
+
 /*Display grid declarations*/
 body {
     display: grid;
