@@ -4,9 +4,9 @@ const addBook = document.querySelector('.add-book');
 document.addEventListener("DOMContentLoaded", function() {
     const book1 = new Book("Harry Potter", "Donald", 254, "Punk/Rock", "Thrown Away");
     addBookToLibrary(book1);
-    console.log(myLibrary);
-    console.log(book1);
     displayBooks();
+
+    const overlay = document.getElementById('overlay');
 });
 
 function Book(title, author, pages, genre, status) {
@@ -38,4 +38,12 @@ function displayBooks() {
 
         bookContainer.appendChild(bookItem);
     })
+}
+
+function showFormOverlay() {
+    overlay.style.display = 'block';
+}
+
+function hideFormOverlay() {
+    overlay.style.display = 'none';
 }
