@@ -1,12 +1,14 @@
 const myLibrary = [];
 const addBook = document.querySelector('.add-book');
+const overlay = document.getElementById('#overlay');
+const exitButton = document.getElementById('#exit-button')
 
 document.addEventListener("DOMContentLoaded", function() {
     const book1 = new Book("Harry Potter", "Donald", 254, "Punk/Rock", "Thrown Away");
     addBookToLibrary(book1);
     displayBooks();
 
-    const overlay = document.getElementById('overlay');
+    
 });
 
 function Book(title, author, pages, genre, status) {
