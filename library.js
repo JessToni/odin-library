@@ -12,6 +12,10 @@ document.addEventListener("DOMContentLoaded", function() {
     addBook.addEventListener('click', function() {
         showFormOverlay();
     });
+
+    exitButton.addEventListener('click', function(){
+        hideFormOverlay();
+    })
 });
 
 function Book(title, author, pages, genre, status) {
