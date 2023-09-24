@@ -63,7 +63,7 @@ function displayBooks() {
         bookItem.classList.add('book-item');
 
         bookItem.innerHTML = `
-        <h2>${book.title}</h2>
+        <h2>Title: ${book.title}</h2>
         <p>Author: ${book.author}</p>
         <p>Pages: ${book.pages}</p>
         <p>Genre: ${book.genre}</p>
