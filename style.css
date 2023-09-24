@@ -64,7 +64,8 @@ body {
 	background-color: coral;
 	padding: 15px;
 	text-align: center;
-	width: 15rem;
+	width: 270px;
+	height: 250px;
 }
 
 /*Styling for modal, overlay, and form*/
@@ -103,5 +104,5 @@ form {
 /*Display grid declarations*/
 body {
     display: grid;
-    grid-template-rows: 1fr 5fr 1fr;
+    grid-template-rows: 2fr 10fr 1fr;
 }
