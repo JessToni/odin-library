@@ -46,7 +46,7 @@ function Book(title, author, pages, genre, status) {
     this.genre = genre;
     this.status = status;
 
-    //Add a remove button
+    //Remove function for remove button
     this.remove = function() {
         const indexToRemove = myLibrary.indexOf(this);
         if (indexToRemove !== -1) {
@@ -55,9 +55,17 @@ function Book(title, author, pages, genre, status) {
         } 
     }
 
+    this.toggleStatus = function() {
+        this.status = this.status === 'read' ? 'unread' : 'read';
+        displayBooks();
+    }
+
+    //Remove button, its text content, and click listener
     this.removeButton = document.createElement('button');
     this.removeButton.textContent = 'Remove';
     this.removeButton.addEventListener('click', this.remove.bind(this));
+
+
 }
 
 function addBookToLibrary(obj) {
