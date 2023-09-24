@@ -45,6 +45,18 @@ function Book(title, author, pages, genre, status) {
     this.pages = pages;
     this.genre = genre;
     this.status = status;
+
+    this.remove = function() {
+        const indexToRemove = myLibrary.indexOf(this);
+        if (indexToRemove !== -1) {
+            myLibrary.splice(indexToRemove, 1);
+            displayBooks();
+        } 
+    }
+
+    this.removeButton = documentCreateElement('button');
+    this.removeButton.textContent = 'Remove';
+    this.removeButton.addEventListener('click', this.remove.bind(this));
 }
 
 function addBookToLibrary(obj) {
@@ -69,6 +81,8 @@ function displayBooks() {
         <p>Genre: ${book.genre}</p>
         <p>Status: ${book.status}</p>
         `;
+
+        bookItem.appendChild(book.removeButton);
 
         bookContainer.appendChild(bookItem);
     })
