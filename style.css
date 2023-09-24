@@ -100,10 +100,6 @@ form {
 	flex-direction: column;
 }
 
-#status-row {
-	flex-direction: row;
-}
-
 /*Display grid declarations*/
 body {
     display: grid;

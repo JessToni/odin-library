@@ -93,11 +93,10 @@ function displayBooks() {
         <p>Author: ${book.author}</p>
         <p>Pages: ${book.pages}</p>
         <p>Genre: ${book.genre}</p>
-        <p>Status: ${book.status}</p>
         `;
 
+        bookItem.appendChild(book.statusButton);
         bookItem.appendChild(book.removeButton);
-        bookItem.appendChild(book.statusButton)
 
         bookContainer.appendChild(bookItem);
     })
