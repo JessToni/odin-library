@@ -31,6 +31,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
         addBookToLibrary(newBook);
 
+        /*Remove appended elements to book container*/
+        const bookContainer = document.querySelector('.book-container');
+        while (bookContainer.firstChild) {
+            bookContainer.removeChild(bookContainer.firstChild);
+        }
+
+        displayBooks();
+
         addBookForm.reset();
 
         hideFormOverlay();
