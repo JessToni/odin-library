@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const author = document.getElementById('author').value;
         const pages = parseInt(document.getElementById('pages').value);
         const genre = document.getElementById('genre').value;
-        const status = document.getElementById('status').value;
+        const status = document.getElementById('status').checked ? 'Read' : 'Unread';
 
         const newBook = new Book(title, author, pages, genre, status);
 
@@ -46,6 +46,7 @@ function Book(title, author, pages, genre, status) {
     this.genre = genre;
     this.status = status;
 
+    //Add a remove button
     this.remove = function() {
         const indexToRemove = myLibrary.indexOf(this);
         if (indexToRemove !== -1) {
