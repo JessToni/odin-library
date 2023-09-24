@@ -55,17 +55,21 @@ function Book(title, author, pages, genre, status) {
         } 
     }
 
+    //Function to toggle read status
     this.toggleStatus = function() {
         this.status = this.status === 'read' ? 'unread' : 'read';
         displayBooks();
     }
 
+    //Toggle status button
+    this.statusButton = document.createElement('button');
+    this.statusButton.textContent = this.status === 'read' ? 'Read' : 'Unread';
+    this.statusButton.addEventListener('click', this.toggleStatus.bind(this));
+
     //Remove button, its text content, and click listener
     this.removeButton = document.createElement('button');
     this.removeButton.textContent = 'Remove';
     this.removeButton.addEventListener('click', this.remove.bind(this));
-
-
 }
 
 function addBookToLibrary(obj) {
