@@ -54,7 +54,7 @@ function Book(title, author, pages, genre, status) {
         } 
     }
 
-    this.removeButton = documentCreateElement('button');
+    this.removeButton = document.createElement('button');
     this.removeButton.textContent = 'Remove';
     this.removeButton.addEventListener('click', this.remove.bind(this));
 }
