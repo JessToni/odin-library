@@ -100,6 +100,11 @@ form {
 	flex-direction: column;
 }
 
+.book-item {
+	display: flex;
+	flex-direction: column;
+}
+
 /*Display grid declarations*/
 body {
     display: grid;
