@@ -6,8 +6,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const exitButton = document.getElementById('exit-btn');
     const addBookForm = document.getElementById('add-book-form');
 
-    const book1 = new Book("Harry Potter", "Donald", 254, "Punk/Rock", "Thrown Away");
-    addBookToLibrary(book1);
     displayBooks();
 
     addBook.addEventListener('click', function() {
@@ -25,7 +23,9 @@ document.addEventListener("DOMContentLoaded", function() {
         const author = document.getElementById('author').value;
         const pages = parseInt(document.getElementById('pages').value);
         const genre = document.getElementById('genre').value;
-        const status = document.getElementById('status').checked ? 'Read' : 'Unread';
+
+        const statusCheckbox = document.getElementById('status');
+        const status = statusCheckbox.checked ? 'Read' : 'Not Read'
 
         const newBook = new Book(title, author, pages, genre, status);
 
@@ -57,13 +57,14 @@ function Book(title, author, pages, genre, status) {
 
     //Function to toggle read status
     this.toggleStatus = function() {
-        this.status = this.status === 'read' ? 'unread' : 'read';
+        this.status = this.status === 'Read' ? 'Not Read' : 'Read';
+        this.statusButton.textContent = this.status
         displayBooks();
     }
 
     //Toggle status button
     this.statusButton = document.createElement('button');
-    this.statusButton.textContent = this.status === 'read' ? 'Read' : 'Unread';
+    this.statusButton.textContent = this.status;
     this.statusButton.addEventListener('click', this.toggleStatus.bind(this));
 
     //Remove button, its text content, and click listener
@@ -96,6 +97,7 @@ function displayBooks() {
         `;
 
         bookItem.appendChild(book.removeButton);
+        bookItem.appendChild(book.statusButton)
 
         bookContainer.appendChild(bookItem);
     })
