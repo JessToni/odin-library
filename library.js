@@ -31,12 +31,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
         addBookToLibrary(newBook);
 
-        /*Remove appended elements to book container*/
-        const bookContainer = document.querySelector('.book-container');
-        while (bookContainer.firstChild) {
-            bookContainer.removeChild(bookContainer.firstChild);
-        }
-
         displayBooks();
 
         addBookForm.reset();
@@ -59,6 +53,10 @@ function addBookToLibrary(obj) {
 
 function displayBooks() {
     const bookContainer = document.querySelector('.book-container');
+    /*Remove appended elements to book container*/
+    while (bookContainer.firstChild) {
+        bookContainer.removeChild(bookContainer.firstChild);
+    }
 
     myLibrary.forEach(function(book) {
         const bookItem = document.createElement('div');
