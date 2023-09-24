@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const addBook = document.querySelector('.add-book');
     const overlay = document.getElementById('overlay');
     const exitButton = document.getElementById('exit-btn');
+    const addBookForm = document.getElementById('add-book-form');
 
     const book1 = new Book("Harry Potter", "Donald", 254, "Punk/Rock", "Thrown Away");
     addBookToLibrary(book1);
@@ -14,6 +15,24 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     exitButton.addEventListener('click', function(){
+        hideFormOverlay();
+    })
+
+    addBookForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const title = document.getElementById('title').value;
+        const author = document.getElementById('author').value;
+        const pages = parseInt(document.getElementById('pages').value);
+        const genre = document.getElementById('genre').value;
+        const status = document.getElementById('status').value;
+
+        const newBook = new Book(title, author, pages, genre, status);
+
+        addBookToLibrary(newBook);
+
+        addBookForm.reset();
+
         hideFormOverlay();
     })
 });
