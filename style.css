@@ -42,8 +42,21 @@ table {
 	border-spacing: 0;
 }
 
-/*CSS custom properties*/
+/*Font families*/
+@font-face {
+	font-family: Oswald-VariableFont;
+	src: url(./fonts/Oswald-VariableFont_wght.ttf);
+}
 
+/*CSS custom properties*/
+:root {
+	--main-font-family: Oswald-VariableFont, serif;
+	--main-color: #FFF5E0;
+	--secondary-color: #FF6969;
+	--tertiary-color: #C70039;
+	--accent-color: #141E46;
+	--error-color: #FE0001;
+}
 
 /*Styling and Positioning Layout Elements*/
 body {
