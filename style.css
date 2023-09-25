@@ -51,10 +51,10 @@ table {
 /*CSS custom properties*/
 :root {
 	--main-font-family: Oswald-VariableFont, serif;
-	--main-color: #FFF5E0;
-	--secondary-color: #FF6969;
-	--tertiary-color: #C70039;
-	--accent-color: #141E46;
+	--main-color: #F0F0F0;
+	--secondary-color: #4F709C;
+	--tertiary-color: #213555;
+	--accent-color: #E5D283;
 	--error-color: #FE0001;
 }
 
@@ -64,8 +64,8 @@ body {
     width: 100vw;
 }
 
-.header, .footer {
-    background-color: steelblue;
+.header {
+	background-color: var(--tertiary-color);
 }
 
 .book-container {
@@ -74,13 +74,19 @@ body {
 	padding: 15px;
 	gap: 15px;
 	justify-items: center;
+	background-color: var(--main-color);
 }
 
 .book-item {
-	background-color: coral;
+	background-color: var(--secondary-color);
 	padding: 15px;
 	width: 270px;
 	height: 250px;
+	color: var(--main-color);
+}
+
+.footer {
+	background-color: var(--tertiary-color);
 }
 
 /*Styling for modal, overlay, and form*/
