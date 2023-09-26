@@ -56,16 +56,30 @@ table {
 	--tertiary-color: #213555;
 	--accent-color: #E5D283;
 	--error-color: #FE0001;
+	--main-font: Oswald-VariableFont, sans serif;
 }
 
 /*Styling and Positioning Layout Elements*/
 body {
     height: 100vh;
     width: 100vw;
+	font-family: var(--main-font);
 }
 
 .header {
 	background-color: var(--tertiary-color);
+	padding: 15px;
+}
+
+.header h1 {
+	color: var(--main-color);
+	padding-bottom: 15px;
+	font-weight: 700;
+	font-size: 35px;
+}
+
+.header button {
+	font-family: var(--main-font);
 }
 
 .book-container {
