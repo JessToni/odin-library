@@ -129,9 +129,23 @@ body {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	background-color: white;
+	background-color: var(--main-color);
 	padding: 20px;
 	z-index: 2;
+}
+
+#exit-btn {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	border-style: none;
+	height: 50px;
+	width: 50px;
+	font-size: 70px;
+	background-color: rgba(0, 0, 0, 0);
+	color: red;
+	line-height: 45px;
+	cursor: pointer;
 }
 
 /*Form styling*/
@@ -154,11 +168,6 @@ form {
 	flex-direction: row;
 }
 
-input {
-	border-style: solid;
-	border-width: 1px;
-}
-
 #status-row input {
 	width: 15px;
 	height: 15px;
@@ -166,6 +175,15 @@ input {
 
 .submit-container {
 	padding-top: 15px;
+}
+
+.submit-container button {
+	width: 60px;
+}
+
+input {
+	border-style: solid;
+	border-width: 1px;
 }
 
 /*Display grid declarations*/
