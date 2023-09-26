@@ -91,16 +91,6 @@ body {
 	background-color: var(--main-color);
 }
 
-.book-item {
-	display: flex;
-	flex-direction: column;
-	background-color: var(--secondary-color);
-	padding: 15px;
-	width: 270px;
-	height: 250px;
-	color: var(--main-color);
-}
-
 .footer {
 	background-color: var(--tertiary-color);
 }
@@ -184,6 +174,32 @@ form {
 input {
 	border-style: solid;
 	border-width: 1px;
+}
+
+/*Book-item styling*/
+.book-item {
+	display: flex;
+	flex-direction: column;
+	background-color: var(--secondary-color);
+	padding: 15px;
+	width: 270px;
+	height: 250px;
+	color: var(--main-color);
+	justify-items: center;
+	gap: 15px;
+}
+
+.book-item .book-text {
+	align-content: center;
+	justify-content: center;
+}
+
+.book-item h2 {
+	font-weight: 500;
+}
+
+.book-item p {
+	font-weight: 300;
 }
 
 /*Display grid declarations*/

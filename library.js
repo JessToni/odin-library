@@ -89,11 +89,12 @@ function displayBooks() {
         bookItem.classList.add('book-item');
 
         bookItem.innerHTML = `
+        <div class=book-text>
         <h2>Title: ${book.title}</h2>
         <p>Author: ${book.author}</p>
         <p>Pages: ${book.pages}</p>
         <p>Genre: ${book.genre}</p>
-        `;
+        </div>`;
 
         bookItem.appendChild(book.statusButton);
         bookItem.appendChild(book.removeButton);
