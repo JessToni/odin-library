@@ -92,7 +92,20 @@ body {
 }
 
 .footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	background-color: var(--tertiary-color);
+	gap: 5px;
+}
+
+.footer p {
+	color: var(--main-color);
+}
+
+.footer img {
+	width: 25px;
+	color: inver;
 }
 
 /*Styling for modal, overlay, and form*/
