@@ -185,6 +185,7 @@ input {
 	width: 270px;
 	height: 250px;
 	color: var(--main-color);
+	align-items: center;
 	justify-items: center;
 	gap: 15px;
 }
@@ -193,13 +194,16 @@ input {
 	display: flex;
 	flex-direction: column;
 	gap: 15px;
-	align-content: center;
-	justify-content: center;
 	padding-bottom: 15px;
 }
 
 .book-item button {
-	
+	font-family: var(--main-font);
+	width: 100px;
+}
+
+.book-item button:nth-child(3) {
+	background-color: coral;
 }
 
 .book-item h2 {
