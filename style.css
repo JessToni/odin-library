@@ -190,8 +190,16 @@ input {
 }
 
 .book-item .book-text {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
 	align-content: center;
 	justify-content: center;
+	padding-bottom: 15px;
+}
+
+.book-item button {
+	
 }
 
 .book-item h2 {
