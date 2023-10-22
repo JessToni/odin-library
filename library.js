@@ -39,38 +39,41 @@ document.addEventListener("DOMContentLoaded", function() {
     })
 });
 
-function Book(title, author, pages, genre, status) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.genre = genre;
-    this.status = status;
+class Book {
+    constructor(title, author, pages, genre, status) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.genre = genre;
+        this.status = status;
+
+        //Toggle status button
+        this.statusButton = document.createElement('button');
+        this.statusButton.textContent = this.status;
+        this.statusButton.addEventListener('click', this.toggleStatus.bind(this));
+
+        //Remove button, its text content, and click listener
+        this.removeButton = document.createElement('button');
+        this.removeButton.textContent = 'Remove';
+        this.removeButton.addEventListener('click', this.remove.bind(this));
+    }
 
     //Remove function for remove button
-    this.remove = function() {
+    remove() {
         const indexToRemove = myLibrary.indexOf(this);
         if (indexToRemove !== -1) {
             myLibrary.splice(indexToRemove, 1);
             displayBooks();
-        } 
+        }
     }
 
     //Function to toggle read status
-    this.toggleStatus = function() {
+
+    toggleStatus() {
         this.status = this.status === 'Read' ? 'Not Read' : 'Read';
         this.statusButton.textContent = this.status
         displayBooks();
     }
-
-    //Toggle status button
-    this.statusButton = document.createElement('button');
-    this.statusButton.textContent = this.status;
-    this.statusButton.addEventListener('click', this.toggleStatus.bind(this));
-
-    //Remove button, its text content, and click listener
-    this.removeButton = document.createElement('button');
-    this.removeButton.textContent = 'Remove';
-    this.removeButton.addEventListener('click', this.remove.bind(this));
 }
 
 function addBookToLibrary(obj) {
